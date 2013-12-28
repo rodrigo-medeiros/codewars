@@ -28,5 +28,7 @@
 // isSantaClausable(notSanta); // must return FALSE
 
 function isSantaClausable(obj) {
-  return obj.hasOwnProperty("sayHoHoHo") && obj.hasOwnProperty("distributeGifts") && obj.hasOwnProperty("goDownTheChimney");
+  return typeof(obj.sayHoHoHo) == "function"
+      && typeof(obj.distributeGifts) == "function"
+      && typeof(obj.goDownTheChimney) == "function";
 }
