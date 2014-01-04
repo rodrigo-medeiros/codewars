@@ -29,6 +29,5 @@ function solution(list) {
       range = [];
     }
   }
-  console.log(range);
   return result.join();
 }
