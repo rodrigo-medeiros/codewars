@@ -34,11 +34,10 @@ Jar.prototype.add = function (amount, type) {
 };
 
 Jar.prototype.pourOut = function (amount) {
-  var amountPerType = amount / this.types.length,
-    type;
+  var type;
   for (type in this.types) {
     if (type !== 'length') {
-      this.types[type] -= amountPerType;
+      this.types[type] -= amount * getConcentration(type);
     }
   }
   this.totalAmount -= amount;
