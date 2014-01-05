@@ -23,21 +23,22 @@ function validBraces(braces) {
     ']': '[',
     '}': '{'
   },
-    stack = [];
+    stack = [],
+    i;
   if (braces.length % 2 !== 0) {
     return false;
   }
-  return braces.split('').reduce(function (stack, brace) {
-    if (brace === '(' || brace === '[' || brace === '{') {
-      stack.push(brace);
+
+  for (i = 0; i < braces.length; i++) {
+    if (braces[i] === '(' || braces[i] === '[' || braces[i] === '{') {
+      stack.push(braces[i]);
     } else {
-      console.log(stack);
-      if (matchingBraces[brace] === stack[stack.length - 1]) {
-        if (stack.pop() === undefined) {
-          stack = [];
-        }
+      if (matchingBraces[braces[i]] === stack[stack.length - 1]) {
+        stack.pop();
+      } else {
+        return false;
       }
-      return false;
     }
-  }, []);
+  }
+  return stack.length === 0;
 }
