@@ -10,7 +10,7 @@
 // Consider the decimal places to be the number of digits after the decimal
 //  separator when the number is expressed in ordinary decimal notation.
 
-function decimalPlaces(n) {
+module.exports = function decimalPlaces(n) {
   if (isNaN(n) || n === Infinity) {
     return 0;
   }
