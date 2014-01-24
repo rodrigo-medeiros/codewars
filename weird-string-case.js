@@ -15,10 +15,10 @@
 // toWeirdCase( "String" );//=> returns "StRiNg"
 // toWeirdCase( "Weird string case" );//=> returns "WeIrD StRiNg CaSe"
 
-function toWeirdCase(string) {
+module.exports = function toWeirdCase(string) {
   return string.split(' ').map(function (word) {
     var index = 0;
-    return string.split('').map(function (letter, index) {
+    return word.split('').map(function (letter, index) {
       if (index === 0 || index % 2 === 0) {
         index++;
         return letter.toUpperCase();
@@ -27,4 +27,4 @@ function toWeirdCase(string) {
       return letter.toLowerCase();
     }).join('');
   }).join(' ');
-}
+};
