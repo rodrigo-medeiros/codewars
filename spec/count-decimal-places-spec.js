@@ -2,7 +2,7 @@ describe("'Count decimal places' kata tests", function () {
 
   var decimalPlaces = require("../count-decimal-places");
 
-  it("should return the correct value for two simple decimal places'", function () {
+  it("should return the correct value for two simple decimal places", function () {
     var result = decimalPlaces(3.14);
     expect(result).toBe(2);
   });
