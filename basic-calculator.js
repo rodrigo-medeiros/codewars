@@ -9,9 +9,9 @@
 
 // Keep in mind, you cannot divide by zero. If an attempt to divide by zero is made, return null.
 
-function calculate(num1, operation, num2) {
+module.exports = function calculate(num1, operation, num2) {
   if (!['+','-','*','/'].some(function (item) {
     return operation === item;
   }) || (operation === "/" && num2 === 0)) return null;
   return eval("" + num1 + operation + num2);
-}
+};
