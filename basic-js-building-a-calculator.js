@@ -29,3 +29,5 @@ var Calculator = {
     return b === 0 ? false : a / b;
   }
 };
+
+module.exports = Calculator;
