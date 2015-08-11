@@ -1,4 +1,4 @@
-# codewars
+# puzzle-solutions
 ==========
 
-Here I keep my solutions to the [codewars](http://www.codewars.com/) katas.
+Here I keep my solutions to puzzles from a lot of different sources.
